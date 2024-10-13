@@ -59,11 +59,11 @@ docker run -p 6333:6333 qdrant/qdrant
  - anecdotes prompt: Prompt dùng để trích xuất câu chuyện ngắn trong cuộc hội thoại
 # 2. Trích xuất thông tin và lưu vào lịch sử trò chuyện
 Trước tiên, Để mô hình có thể trả lời theo ngôn ngữ câu hỏi câu hỏi.  Trong system prompt em sử dụng kỹ thuật prompt enigneer là tips thêm cho mô hình tiền nếu mô hình trả lời đúng theo yêu cầu của em đặt ra     
-![alt text](Backend\images\image-1.png)            
+![alt text](Backend/images/image-1.png)            
 Và kết quả:           
-![alt text](Backend\images\image.png)
+![alt text](Backend/images/image.png)
 - Tạo lịch sử trò chuyện sử dụng LangChain framework, để lưu trữ lịch sử hội thoại vào memory
-![alt text](Backend\images\image-2.png)                
+![alt text](Backend/images/image-2.png)                
 - Sử dụng LangChain để lưu trữ câu chuyện ngắn vào memory
 - Sử dụng LangChain để lưu trữ câu topic vào memory
 - Lưu trữ cảm xúc của lịch sử hội thoại vào memory
