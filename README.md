@@ -45,13 +45,13 @@ To experience the full power of Qdrant locally, run the container with this comm
 ```shell 
 docker run -p 6333:6333 qdrant/qdrant
 ```
-
-## Phân tích các phương án
+## III. Documentation Report
+# 1.Phân tích các phương án
 Để thực hiện bài toán trên ta có hai hướng tiếp cận: Fine-tune và RAG
 - Fine-tuning: Ta có thể để mô hình output ra đầu ra theo ngữ cảnh/tone và cảm xúc của nhân vật. Tuy nhiên trong quá trình chuẩn bị dữ liệu em nhận thấy các bộ dữ liệu trên mạng chỉ cung cấp những câu đơn lẻ và thiếu ngữ cảnh của những cuộc hội thoại trước đó. Bên cạnh đó, qua quá trình chuẩn bị dữ liệu. Em gặp phải thách thức out of quota khi sử dụng GPT4 để sinh câu hỏi => Vấn đề chi phí 
 - RAG: Một số thư viện như LangChain hỗ trợ cơ chế lưu trữ hội thoại vào memory => Chọn phương án RAG. Vì RAG phù hợp với những dự án có dữ liệu không quá lớn.
-## III. Documentation Report
-# 1. Chuẩn bị prompt (Lưu trong thư mục Prompt)
+
+# 2. Chuẩn bị prompt (Lưu trong thư mục Prompt)
  - System prompt: System prompt cho hệ thống đóng vai trò là nhân vật Choi để giải đáp một số thắc mắc của David
  - Emotion prompt: User prompt cho hệ thống đóng vai trò là David để hỏi một số.
  - Topic prompt: Prompt dùng để trích xuất chủ đề của cuộc hội thoại.
@@ -63,8 +63,6 @@ Trước tiên, Để mô hình có thể trả lời theo ngôn ngữ câu hỏ
 Và kết quả:           
 ![alt text](image.png)
 - Tạo lịch sử trò chuyện sử dụng LangChain framework, để lưu trữ lịch sử hội thoại vào memory
-
-
 - Sử dụng LangChain để lưu trữ câu chuyện ngắn vào memory
 - Sử dụng LangChain để lưu trữ câu topic vào memory
 - Lưu trữ cảm xúc của lịch sử hội thoại vào memory
