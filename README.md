@@ -40,8 +40,8 @@ Mở terminal và gõ lệnh dưới đây để cài đặt các thư viện s�
 ```shell 
 pip install -r requirements.txt
 ```
-## 5. Client-Server cho Qdrant vectorDB
-To experience the full power of Qdrant locally, run the container with this command:
+## 5. Cài đặt Client-Server cho Qdrant vectorDB
+Để trải nghiệm Qdrant trên máy cục bộ, hãy chạy container với lệnh sau:
 ```shell 
 docker run -p 6333:6333 qdrant/qdrant
 ```
@@ -57,16 +57,20 @@ docker run -p 6333:6333 qdrant/qdrant
  - Topic prompt: Prompt dùng để trích xuất chủ đề của cuộc hội thoại.
  - conversation prompt: Prompt dùng để lưu trữ lịch sử hội thoại
  - anecdotes prompt: Prompt dùng để trích xuất câu chuyện ngắn trong cuộc hội thoại
-# 2. Trích xuất thông tin và lưu vào lịch sử trò chuyện
+# 3. Trích xuất thông tin và lưu vào lịch sử trò chuyện
 Trước tiên, Để mô hình có thể trả lời theo ngôn ngữ câu hỏi câu hỏi.  Trong system prompt em sử dụng kỹ thuật prompt enigneer là tips thêm cho mô hình tiền nếu mô hình trả lời đúng theo yêu cầu của em đặt ra     
 ![alt text](Backend/images/image-1.png)            
 Và kết quả:           
 ![alt text](Backend/images/image.png)
 - Tạo lịch sử trò chuyện sử dụng LangChain framework, để lưu trữ lịch sử hội thoại vào memory
 ![alt text](Backend/images/image-2.png)                
-- Sử dụng LangChain để lưu trữ câu chuyện ngắn vào memory
-- Sử dụng LangChain để lưu trữ câu topic vào memory
-- Lưu trữ cảm xúc của lịch sử hội thoại vào memory
+- Sử dụng LangChain để lưu trữ câu chuyện ngắn/topic/lịch sử hội thoại vào memory
+![alt text](Backend/images/image1.png)
+
+# 4. Lựa chọn vectorDB(Đang làm)
+Em lựa chọn Qdrant bởi một số lý do sau:      
+- Qdrant được thiết kế để cung cấp khả năng tìm kiếm vector nhanh và hiệu quả
+- Với khả năng mở rộng quy mô, Qdrant có thể xử lý lượng dữ liệu lớn và thực hiện tìm kiếm theo thời gian thực, phù hợp cho các ứng dụng cần truy xuất thông tin nhanh chóng từ các tập dữ liệu khổng lồ.
 
 
 
