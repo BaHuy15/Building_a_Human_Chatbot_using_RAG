@@ -72,6 +72,10 @@ Em lựa chọn Qdrant bởi một số lý do sau:
 - Qdrant được thiết kế để cung cấp khả năng tìm kiếm vector nhanh và hiệu quả
 - Với khả năng mở rộng quy mô, Qdrant có thể xử lý lượng dữ liệu lớn và thực hiện tìm kiếm theo thời gian thực, phù hợp cho các ứng dụng cần truy xuất thông tin nhanh chóng từ các tập dữ liệu khổng lồ.
 
+# 5. Embedding model(Đang làm)
+model_name : all-MiniLM-L12-v2 
+Mặc dù mô hình này chủ yếu tập trung vào tiếng Anh, nó cũng có khả năng hỗ trợ đa ngôn ngữ. Điều này làm cho nó trở thành lựa chọn hợp lý cho các dự án đa ngôn ngữ hoặc yêu cầu xử lý các ngôn ngữ khác nhau trong một hệ thống duy nhất. Rất phù hợp với dự án này. Vì chúng ta cần tìm kiếm ngữ nghĩa của 2 loại ngôn ngữ là tiếng anh và tiếng hàn
+Chi tiết: Backend/embedding_model/sentencetransformer.py
 
 
 
